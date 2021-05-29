@@ -9,17 +9,47 @@
         body {
             font-family: monospace;
         }
-
         .content {
             margin-top: 20px;
-            margin-bottom: 200px;
             max-width: 480px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 200px;
+        }
+        .pages {
+            max-width: 320px;
+            margin-bottom: 30px;
+        }
+        .right-side {
+            padding-top: 90px;
+            padding-left: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        @media only screen and (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                margin-bottom: 50px;
+            }
+            .right-side {
+                padding-top: 0;
+                padding-left: 0;
+                display: flex;
+                flex-direction: column;
+            }
+            .pages {
+                width: 100%;
+                margin-bottom: 30px;
+            }
         }
     </style>
 </head>
 
 <body>
     <a href="/"><img src='/logo.png' width="40px" height="40px"/></a>
+    <div class='container'>
     <article class='content'>
         2021-05-29
         <h1>A Little Life by Hanya Yanagihara</h1>
@@ -80,6 +110,11 @@
         </p>
 
     </article>
+    <div class="right-side">
+        <img class="pages" src="a-little-life-cover.jpg" />
+        <img class="pages" src="a-little-life-page.jpg" />
+    </div>
+    </div>
 
 
 </body>
